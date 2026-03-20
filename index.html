@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraMaps - Territory Design Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson@3"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="assets/logo.png" alt="TerraMaps" class="logo-icon">
+                <div class="logo">TerraMaps</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#video">Video Overview</a></li>
+                <li><a href="#contact" class="btn-secondary">Request Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop playsinline preload="auto" id="hero-video">
+            <source src="background-video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Transform how you design territories.</h1>
+                <p class="hero-subtitle">TerraMaps is New Age tech that delivers intelligent territory planning tools, empowering sales leaders to create equitable assignments, streamline coverage, and drive sustainable growth across teams.</p>
+                <a href="#contact" class="btn-primary btn-large">Request Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Powerful Features Built for Sales Leaders</h2>
+            <div class="feature-blocks">
+                <div class="feature-block">
+                    <svg class="feature-viz collab-viz" id="collab-viz" width="500" height="280" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="feature-text">
+                        <h3>Real-time Collaboration</h3>
+                        <p>Multiple users working on the map simultaneously with different levels of permission. Every change is automatically saved, so you never lose your work.</p>
+                    </div>
+                </div>
+                <div class="feature-block">
+                    <svg class="feature-viz report-viz" id="report-viz" width="480" height="280" viewBox="0 0 480 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="feature-text">
+                        <h3>Automated Reporting</h3>
+                        <p>Generate PowerPoint presentations with territory metrics, regional summaries, and account tables. Export Excel reports at territory, region, or area levels with workload index and span of control data.</p>
+                    </div>
+                </div>
+                <div class="feature-block">
+                    <svg class="feature-viz bulk-viz" id="bulk-viz" width="500" height="280" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="feature-text">
+                        <h3>Powerful Bulk Operations</h3>
+                        <p>Move entire lists of zip codes to new territories in seconds. Paste zips, select destination territory, and reassign with a single click. Perfect for restructuring large account portfolios.</p>
+                    </div>
+                </div>
+                <div class="feature-block">
+                    <svg class="feature-viz fast-viz" id="fast-viz" width="500" height="280" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    <div class="feature-text">
+                        <h3>Multiple Basemap Layers</h3>
+                        <p>Switch between Default, Satellite, and Plain basemap styles instantly. Choose the map view that works best for your territory analysis—satellite imagery for geographic context, plain for clean data visualization, or default for detailed reference.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>How TerraMaps Works</h2>
+            <div class="steps-grid">
+                <div class="step-row">
+                    <div class="step-viz-wrap">
+                        <svg class="step-viz" id="connect-viz" width="500" height="280" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    </div>
+                    <div class="step-text">
+                        <h3>Connect</h3>
+                        <p>Import your accounts, territories, and sales data from spreadsheets or CRM systems. Customize layer names and set up your geography hierarchy - territories, regions, areas - to match your organization.</p>
+                    </div>
+                </div>
+                <div class="step-row reverse">
+                    <div class="step-viz-wrap">
+                        <svg class="step-viz" id="build-viz" width="500" height="280" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    </div>
+                    <div class="step-text">
+                        <h3>Build</h3>
+                        <p>Design territories with precision and speed. Outline zip codes, make bulk moves with lists, toggle layers on and off for clarity, and watch as multiple team members collaborate in real-time with controlled permissions.</p>
+                    </div>
+                </div>
+                <div class="step-row">
+                    <div class="step-viz-wrap">
+                        <svg class="step-viz" id="refine-viz" width="500" height="280" viewBox="0 0 500 280" preserveAspectRatio="xMidYMid meet"></svg>
+                    </div>
+                    <div class="step-text">
+                        <h3>Refine</h3>
+                        <p>Generate comprehensive reports at any level - territory, region, or area. Export to Excel, create PowerPoint presentations with automated screenshots and metrics tables, or export to ZTT format for downstream systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Video Overview Section -->
+    <section class="video-section" id="video">
+        <div class="container">
+            <h2>See TerraMaps in Action</h2>
+            <div class="video-placeholder">
+                <div class="play-icon">▶</div>
+                <p>Video coming soon</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Territory Planning?</h2>
+            <p>Join sales leaders who are revolutionizing how they design territories.</p>
+            <a href="#contact" class="btn-primary btn-large">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TerraMaps</h4>
+                    <p>Intelligent territory design for modern sales teams.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#contact">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>hello@terramaps.com</p>
+                    <p>San Francisco, CA</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TerraMaps. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
