@@ -550,10 +550,14 @@ section {
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
     margin-bottom: 60px;
+}
+
+.footer-section {
+    min-width: 160px;
 }
 
 .footer-section h4 {
@@ -646,7 +650,7 @@ section {
     }
 
     .footer-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .nav-links {
